@@ -1,0 +1,18 @@
+name: Endymion
+description: Custom starter theme
+type: theme
+core: 8.x
+
+regions:
+  header: Header
+  navigation: Navigation
+  left_sidebar: Left-sidebar
+  content: Content
+  footer: Footer
+  page_top: Page-top
+  page_bottom: Page-bottom
+
+
+libraries:
+  -'endymion/global-css'
+  -'endymion/global-js'

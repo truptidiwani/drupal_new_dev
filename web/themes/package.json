@@ -1,0 +1,22 @@
+{
+  "name": "drupal_new_dev",
+  "version": "1.0.0",
+  "description": "my first custom module",
+  "main": "index.js",
+  "scripts": {
+    "test": "skip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "skip"
+  },
+  "keywords": [
+    "skip"
+  ],
+  "author": "trupti",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
