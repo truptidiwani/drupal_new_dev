@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a233187764411fddb6c18a5bb7a4d140",
+    "content-hash": "0710dc34db91f27e0f1f60d9437fcc19",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2623,6 +2623,91 @@
             "homepage": "https://www.drupal.org/project/danland",
             "support": {
                 "source": "http://cgit.drupalcode.org/danland"
+            }
+        },
+        {
+            "name": "drupal/devel",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/devel",
+                "reference": "8.x-2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/devel-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "cf5fb816f767f3cac4f2e170ab39e982d5e0698b"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "symfony/var-dumper": "~2.7|^3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0",
+                    "datestamp": "1548799380",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Moshe Weitzman",
+                    "homepage": "https://github.com/weitzman",
+                    "email": "weitzman@tejasa.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Hans Salvisberg",
+                    "homepage": "https://www.drupal.org/u/salvis",
+                    "email": "drupal@salvisberg.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Luca Lusso",
+                    "homepage": "https://www.drupal.org/u/lussoluca",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Marco (willzyx)",
+                    "homepage": "https://www.drupal.org/u/willzyx",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/3236/committers"
+                },
+                {
+                    "name": "salvis",
+                    "homepage": "https://www.drupal.org/user/82964"
+                },
+                {
+                    "name": "willzyx",
+                    "homepage": "https://www.drupal.org/user/1043862"
+                }
+            ],
+            "description": "Various blocks, pages, and functions for developers.",
+            "homepage": "http://drupal.org/project/devel",
+            "support": {
+                "source": "http://cgit.drupalcode.org/devel",
+                "issues": "http://drupal.org/project/devel",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -5407,16 +5492,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.38.2",
+            "version": "v1.38.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "874adbd9222f928f6998732b25b01b41dff15b0c"
+                "reference": "5df0ef0ca2d08a6f087384c7f31530fb84889f28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/874adbd9222f928f6998732b25b01b41dff15b0c",
-                "reference": "874adbd9222f928f6998732b25b01b41dff15b0c",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/5df0ef0ca2d08a6f087384c7f31530fb84889f28",
+                "reference": "5df0ef0ca2d08a6f087384c7f31530fb84889f28",
                 "shasum": ""
             },
             "require": {
@@ -5469,7 +5554,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-03-12T18:45:24+00:00"
+            "time": "2019-03-21T14:50:13+00:00"
         },
         {
             "name": "typo3/phar-stream-wrapper",

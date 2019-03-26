@@ -15,21 +15,9 @@ gulp.task('reload',function(done){
   browserSync.reload();
   done();
 })
-
-// gulp.task('sass', function(){
-//     return gulp.src('app/scss/**/*.scss')
-//       .pipe(sass()) // Converts Sass to CSS with gulp-sass
-//       .pipe(gulp.dest('css/style.css'))
-//       .pipe(browserSync.stream());
-//   });
-
-  
-  // const dev = gulp.series('sass','browser-sync','watch');
-  // export default dev;
   
 
-
-  gulp.task('browser-sync',function(){
+ gulp.task('browser-sync',function(){
     browserSync.init({
       open:'external',
       host:'localhost',

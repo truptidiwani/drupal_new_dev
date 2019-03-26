@@ -1,0 +1,31 @@
+{# Main #}
+{# Header #}
+{% if page.header %}
+<div class="full-width">
+  {{page.header}}
+</div>
+{% endif %}
+
+{#content#}
+{% if page.sidebar_first %}
+<div class="main-wrapper">
+  <div class="content">
+    {{page.content}}
+  </div>
+  <div class="sidebar">
+    {{page.sidebar_first}}
+  </div>
+</div>
+{% else %}
+<div class="contentoff">
+    {{page.content}}
+  </div>
+{% endif%}
+
+{# footer #}
+{% if page.footer %}
+<div class="full-width">
+  {{page.footer}}
+</div>
+{% endif%}
+

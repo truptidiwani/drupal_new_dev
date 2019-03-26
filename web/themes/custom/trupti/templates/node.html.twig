@@ -1,0 +1,18 @@
+{% set classname=node.field_position.value %}
+<div class="wrapper">
+  <div{{ attributes.addClass(classname) }}>
+      {{ content }}
+  </div>
+</div>
+
+{% set backimg= file_url(content.field_images['#items'].entity.uri.value) %}
+    <div class="backimage" style="background:url('{{backimg }}');">
+      <div class="heading">
+        {{content.field_heading}}
+      </div>
+    </div>
+
+
+ 
+
+  
