@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\weather_cast\form;
+namespace Drupal\weather_cast\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -22,19 +22,22 @@ class WeatherForm extends ConfigFormBase {
         $form['appid']=[
             '#type'=> 'textfield',
             '#title'=> $this->t('App ID'),
-            '#default_value'=>$config->get('app'),
+            '#default_value'=>$config->get('app'),   
             
         ];
-        
         return parent::buildForm($form, $form_state); 
     }
-    public function validateForm(array &$form, FormStateInterface $form_state) {
+
+    public function validateForm(array &$form, FormStateInterface $form_state)
+    {
         
     }
-    public function submitForm(array &$form, FormStateInterface $form_state) {
+
+    public function submitForm(array &$form, FormStateInterface $form_state) 
+    {
         $values = $form_state->getValues();
         $this->config('weather_cast.settings')
-            ->set('appid', $form_state->getValue('app'))
+            ->set('app', $values)
             ->save();
         parent::submitForm($form, $form_state);
     }
