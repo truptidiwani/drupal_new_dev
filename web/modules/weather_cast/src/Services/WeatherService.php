@@ -1,9 +1,6 @@
 <?php
-
 namespace Drupal\weather_cast\Services;
-
 use Guzzle\Http\Client;
-
 class WeatherService{
     public function get_weather($city)
     {

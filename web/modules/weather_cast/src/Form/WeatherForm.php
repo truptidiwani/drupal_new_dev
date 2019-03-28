@@ -2,14 +2,11 @@
 namespace Drupal\weather_cast\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-
 class WeatherForm extends ConfigFormBase {
-
     public function getFormId()
     {
         return 'weather_cast.settings';
     }
-
     protected function getEditableConfigNames() {
         return [ 
           'weather_cast.settings',
@@ -27,12 +24,10 @@ class WeatherForm extends ConfigFormBase {
         ];
         return parent::buildForm($form, $form_state); 
     }
-
     public function validateForm(array &$form, FormStateInterface $form_state)
     {
         
     }
-
     public function submitForm(array &$form, FormStateInterface $form_state) 
     {
         $values = $form_state->getValues();

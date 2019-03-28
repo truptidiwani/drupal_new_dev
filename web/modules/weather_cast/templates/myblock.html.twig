@@ -1,4 +1,42 @@
-<p>{{ description }}</p>
+{{ attach_library('weather_cast/weather_library') }}
+<div class="wrapper" style="background-image: url('{{ file_url(image) }}');">
+        
+    <div class="city">
+               <!--<img src="modules/weather_cast/image/havasu.jpeg">-->
+        <h3>{{ city }}</h3>    
+    </div>
+    
+    <div class="desc">
+         <h2>{{ description }} </h2>
+    </div>
+
+</div> 
+
+<div class="subwrapper">
+
+    <div class="attr">
+       Temp_Min<h3>{{ temp_min }}</h3>
+    </div>
+
+    <div class="attr">
+       Temp_Max<h3>{{ temp_max }}</h3>
+    </div>
+
+    <div class="attr">
+       Pressure<h3>{{ pressure }}</h3> 
+    </div>
+
+    <div class="attr">
+       Humidity<h3>{{ humidity }}</h3> 
+    </div>
+
+    <!-- <div class="attr">
+        <h3>{{ wind }}</h3>
+    </div> -->
+
+</div> 
+
+<!-- <p>{{ description }}</p>
 
 <p>{{ city }}</p>
 
@@ -10,11 +48,5 @@
 
 <p>{{ humidity }}</p>
 
-<p>{{ wind }}</p>
+<p>{{ wind }}</p> -->
 
-<div class="back" style="background-image: url('{{ file_url(image) }}');">
-        <div class="city">
-               <!--<img src="modules/weather_cast/image/havasu.jpeg">-->
-    
-            <h3>{{ city }}</h3>    
-</div>

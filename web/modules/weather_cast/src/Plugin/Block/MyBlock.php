@@ -1,7 +1,5 @@
 <?php
-
 namespace Drupal\weather_cast\Plugin\Block;
-
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\FormBase;
@@ -23,20 +21,18 @@ class MyBlock extends BlockBase {
   {
     $config = $this->getConfiguration();
     $city = isset($config['city']) ? $config['city'] : '';   
-    $desc = isset($config['desc']) ? $config['desc'] : '';   
+    $desc = isset($config['desc']) ? $config['desc'] : '';
 
     $conf = \Drupal::config('weather_cast.settings');
     $appid= $conf->get('app');
     $serv= \Drupal::service('weather_cast.weather');
     $call = $serv->get_weather($city);
     $jsonObj = json_decode($call);
-
     //kint($jsonObj);
     //exit();
     //print_r ($jsonObj);
-
     $image = $config['img'];
-    $file = File::load($image[0]);
+    $file = \Drupal\file\Entity\File::load($image[0]);
     $img = $file->getFileUri();
     return array(
      '#theme' => 'weather_cast',
@@ -48,7 +44,6 @@ class MyBlock extends BlockBase {
      '#pressure'=> $jsonObj->main->pressure,
      '#humidity'=> $jsonObj->main->humidity,
      '#wind'=> $jsonObj->wind->speed,
-
     );
    }
   
@@ -89,8 +84,8 @@ class MyBlock extends BlockBase {
         $this->setConfigurationValue('img', $form_state->getValue('image'));
         $image = $form_state->getValue('img');
         //$this->configuration['image'] = $image;
-        $file = \Drupal\file\Entity\File::load($image[0]);
-        $file->setPermanent();
-        $file->save();    
+        // $file =File::load($image[0]);
+        // $file->setPermanent();
+        // $file->save();    
   }
 }
