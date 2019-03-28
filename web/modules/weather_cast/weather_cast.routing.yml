@@ -1,7 +1,0 @@
-weather_cast.form:
-  path: '/weatherform'
-  defaults:
-    _title: 'Weather Form'
-    _form: 'Drupal\weather_cast\Form\WeatherForm'
-  requirements:
-    _permission: 'access content'
