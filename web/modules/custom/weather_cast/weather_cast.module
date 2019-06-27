@@ -30,3 +30,19 @@ function mytheme_button_override_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+/**
+ * Implements hook_page_attachments.
+ */
+function my_module_page_attachments(array &$attachments) {
+    // Add user time zone to drupalSettings.
+    global $user_time,$current_user;
+
+    //$user_time zone = new \Datetime zone($user_time zone());
+    $attachments['#attached']['drupalSettings']['my_module']['user'] = [
+      'time zone' => drupal_get_user_time .zone(),
+    ];
+    // Cache this per user.
+    $attachments['#cache']['contexts'][] = 'user';
+    // Clear the cache when the users is updated.
+    $attachments['#cache']['tags'][] = 'user:' . $current_user->id();
+  } 
