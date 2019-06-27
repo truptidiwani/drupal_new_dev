@@ -21,3 +21,12 @@ function weather_cast_theme() {
         ]
     ];
 }
+function mytheme_button_override_form_alter(&$form, &$form_state, $form_id) {
+    global $user;
+    if ($user->uid == 0) {
+      if ($form_id == 'user_register_form') {
+        // Change register button text.
+        $form['actions']['submit']['#value'] = t('Submit!');
+      }
+    }
+  }
