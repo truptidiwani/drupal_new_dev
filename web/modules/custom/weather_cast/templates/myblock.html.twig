@@ -1,0 +1,41 @@
+{{ attach_library('weather_cast/weather_library') }}
+
+   <div class="wrapper" style="background-image: url('{{ file_url(image) }}');">
+         
+      <div class="city">      
+         <h3>{{ city }}</h3>    
+      </div>
+      
+      <div class="desc">
+         <h3>{{ description }} </h3>
+      </div>
+
+   </div> 
+
+   <div class="subwrapper">
+
+      <div>
+         Temp_Min<h5>{{ temp_min }}</h5>
+      </div>
+
+      <div>
+         Temp_Max<h5>{{ temp_max }}</h5>
+      </div>
+
+      <div>
+         Pressure<h4>{{ pressure }}</h4> 
+      </div>
+
+      <div>
+         Humidity<h5>{{ humidity }}</h5> 
+      </div>
+
+      <div>
+         Wind<h5>{{ wind }}</h5>
+      </div>
+
+   </div> 
+
+
+
+<!--<img src="modules/weather_cast/image/havasu.jpeg">-->

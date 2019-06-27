@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+
+function weather_cast_theme() {
+    return [
+        'weather_cast' => [
+            'variables' => [
+                'description' => NULL,
+                'image' => NULL,
+                'temp_min' => NULL,
+                'temp_max' => NULL,
+                'pressure' => NULL,
+                'humidity' => NULL,
+                'wind'=> NULL,
+                'city' => NULL
+            ],
+            'template' => 'myblock'
+        ]
+    ];
+}
